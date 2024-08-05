@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links and Images</title>
+</head>
+<body>
+    <h1>Links and Images</h1>
+    <a>Here is a link that does nothing yet</a>
+    <p>
+        This is because there is no attribute yet. Every attribute has a name and a value,
+        and in this case, we need a href (hypertext reference) attribute in the opening,
+        with the value being where the link is supposed to go.
+    </p>
+    <a href="https://www.google.com">Here is a Google link</a>
+    <p>
+        While href refers to a destination link, target specifies where the link will be opened.
+        If nothing is present, it defaults to "_self", where the current tab is overridden.
+        To use a new tab, use "_blank" instead.
+    </p>
+    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google Link that opens in New Tab</a>
+    <p>
+        Here, the rel attribute is used to describe the relation between the current page and the linked document. 
+        The "noopener" value prevents the opened link from gaining access to the webpage which it was opened,
+        while the "noreferrer" prevents the opened link from knowing which webpage or resource has a link to it.
+        It's good to note that "noreferrer" by default also includes "noopener"
+    </p>
+    <p>
+        This added behavior is good practice for security reasons, where "noopener" prevents phishing attacks known as "tabnabbing"
+        The "noreferrer" makes it so that the webpage you linked will not know that you linked it.
+        While recent browsers may have this by default when you add the "_blank" tag, it is still good practice to add it when using links.
+    </p>
+    <h1>Difference between Absolute and Relative Links</h1>
+    <p>
+        <ul>
+            <li><b>Absolute Links</b> link to other pages directly and contain a "protocol+domain+path"</li>
+            <li><b>Relative Links</b> link to other pages in our own website</li>
+        </ul>
+        Here is a link to an empty about page in our website. 
+        <a href="./pages/about.html">About Page</a>
+        <a href="../index.html">Home Page</a>
+    </p>
+    <p>
+        <h1>Attatching Images</h1>
+        Websites are boring without images. The "img" element lets you attach images to a website.
+        <img src="Kurisu_profile.webp" alt="Picture of Makise Kurisu" height="480" width="371">
+    </p>
+    <p>Like this WEBP file</p>
+    <p>Every image needs an "alt" attribute in case the image cannot be shown, or for assistive technologies</p>
+    <p>
+        Having size attributes specified (width and height attributes) helps the browser layout the page without causing issues.
+        While not strictly neccessary, this is good practice, even if CSS is used in the future to modify the said image. 
+    </p>
+</body>
+</html>
